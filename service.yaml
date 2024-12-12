@@ -1,0 +1,18 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: img-processor
+  namespace: default
+spec:
+  template:
+    spec:
+      containers:
+        - image: yvesdylane/lab2-image-processor:latest
+          imagePullPolicy: IfNotPresent 
+          env:
+            - name: MINIO_URL
+              value: http://yveanepc:9001
+            - name: MINIO_ACCESS_KEY
+              value: admin
+            - name: MINIO_SECRET_KEY
+              value: admin123
