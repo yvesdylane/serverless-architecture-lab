@@ -6,7 +6,7 @@ from minio import Minio
 from minio.error import S3Error
 
 # Load MinIO configuration from environment variables or use default values
-MINIO_HOST = os.getenv("MINIO_HOST", "yveanepc:9000")
+MINIO_HOST = os.getenv("MINIO_URL", "yveanepc:9000")
 MINIO_ACCESS_KEY = os.getenv("MINIO_ACCESS_KEY", "admin")
 MINIO_SECRET_KEY = os.getenv("MINIO_SECRET_KEY", "admin123")
 

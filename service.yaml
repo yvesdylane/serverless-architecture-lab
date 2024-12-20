@@ -11,7 +11,7 @@ spec:
           imagePullPolicy: IfNotPresent 
           env:
             - name: MINIO_URL
-              value: http://yveanepc:9001
+              value: http://192.168.100.1:9001
             - name: MINIO_ACCESS_KEY
               value: admin
             - name: MINIO_SECRET_KEY
